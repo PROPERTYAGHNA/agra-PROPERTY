@@ -105,66 +105,83 @@ body {
   background-position: center;
 }
 
-.slider-container {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
+.slider{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
 }
 
-.slider {
-  display: flex;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
+figure{
+    position: relative;
+    left: 0;
+    width: 400%; /* width dikali slide */
+    animation: 10s slide infinite;
 }
 
-.slide {
-  min-width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: none;
+.slide{
+    position: relative;
+    width: 25%; /* width dibagi slide */
+    float: left;
 }
 
-.slide.active {
-  display: block;
+.slide h1{
+    position: absolute;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.caption {
-  position: absolute;
-  bottom: 40px;
-  left: 50px;
-  color: white;
-  font-size: 2.5rem;
-  background: rgba(0,0,0,0.5);
-  padding: 10px 20px;
-  border-radius: 5px;
+.slide img{
+    width: 100%;
+    height: 500px;
 }
 
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: white;
-  background-color: rgba(0,0,0,0.3);
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.6);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
+slide{
+    0%{
+        left:0;
+    }
+    10%{
+        left:0;
+    }
+    20%{
+        left:-100%;
+    }
+    30%{
+        left:-100%;
+    }
+    40%{
+        left:-200%;
+    }
+    50%{
+        left:-200%;
+    }
+    55%{
+        left:-300%;
+    }
+    65%{
+        left:-300%;
+    }
+    66%{
+        left:-200%;
+    }
+    74%{
+        left:-200%;
+    }
+    75%{
+        left:-100%;
+    }
+    85%{
+        left:-100%;
+    }
+    90%{
+        left:0;
+    }
+    1000%{
+        left:0;
+    }
 }
 
 footer{
@@ -238,3 +255,4 @@ footer{
     font-weight: 200;
 
 }
+
